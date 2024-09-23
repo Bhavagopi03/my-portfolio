@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhava's Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .nebula {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        nav a {
+            color: rgb(136, 126, 126);
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+            white-space: nowrap;
+            margin: 0;
+        }
+
+        nav a:hover {
+            color: rgb(158, 157, 157);
+            transform: scale(1.1);
+            pointer-events: painted;
+        }
+
+        .content {
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px 20px;
+            height: 100%;
+            margin-top: 100px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid grey;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        #name,
+        #role,
+        #description #picy {
+            opacity: 0;
+            margin-top: 20px;
+        }
+
+
+        body {
+            font-family: 'Zilla Slab', serif;
+            padding-top: 70px;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            color: rgb(48, 47, 47);
+            text-align: center;
+        }
+        #description{
+            display: flex;
+        justify-content: center;
+        max-width: 600px; 
+        margin: 0 auto; 
+        text-align: center;
+        background-color: rgba(118, 118, 118, 0.5);
+        font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop class="nebula">
+        <source src="moonie.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#Edu">Education</a>
+            <a href="#Extra">External Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="content">
+        <img id="picy" src="https://thumb.ac-illust.com/86/86fe15e51a828b45e60f2313a0952853_t.jpeg" alt="Profile Image">
+        <h2 id="name">Bhav</h2>
+        <h4 id="role">Developer</h4>
+        <p id="description">As a final year MCA student, I've explored everything from programming to cybersecurity and
+            machine learning, always pushing boundaries and growing. With my skills and passion, I'm ready to code the
+            future and make an impact.</p>
+    </div>
+
+    <script>
+
+        gsap.from('nav a', { opacity: 0, duration: 1, stagger: 0.2, ease: "power1.out" });
+        gsap.to("#picy", { duration: 1, scale: 1.5, opacity: 1, ease: "power1.out" });
+        gsap.to("#name", { duration: 1, scale: 1.5, opacity: 1, ease: "bounce.out" });
+        gsap.to("#role", { duration: 1, delay: 0.5, scale: 1.2, opacity: 1, ease: "power2.out" });
+        gsap.to("#description", { duration: 1, delay: 1, y: 20, opacity: 1, ease: "back.out" });
+
+    </script>
+</body>
+
+</html>
