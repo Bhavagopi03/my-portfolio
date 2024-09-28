@@ -135,7 +135,7 @@ nav a:hover {
 }
 /* SKILL PART!!! */
 .skills {
-    padding: 200px 55px;
+    padding: 100px 50px;
    
     color: #282828;
 }
@@ -184,7 +184,7 @@ nav a:hover {
 }
 /* PROJECT PART!! */
 .projects {
-    padding: 150px 55px;
+    padding: 106px 55px;
     background-color: rgba(255, 255, 255, 0.3); 
     color: #050505;
 }
@@ -332,7 +332,7 @@ footer {
 }
 
 /* MEDIA ESPONSIVE!!! */
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     body {
         flex-direction: column;
         padding: 0;
@@ -350,7 +350,7 @@ footer {
         right: 0;
         background-color: rgba(255, 255, 255, 0.95);
         flex-direction: column;
-        width: 200px;
+        width: 180px;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
